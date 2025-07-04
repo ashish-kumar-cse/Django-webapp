@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Commands Showcase</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+            color: #333;
+        }
+
+        .nav {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .nav a {
+            display: inline-block;
+            margin: 0 15px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav a:hover {
+            background-color: #45a049;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .command-section {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .command {
+            margin-bottom: 25px;
+        }
+
+        .command pre {
+            background: #eee;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            overflow-x: auto;
+        }
+
+        .command h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'contact' %}">Contact Us</a>
+    </div>
+
+    <h1>Cool Python Commands and Their Use Cases</h1>
+
+    <div class="command-section">
+
+        <div class="command">
+            <h3><code>enumerate()</code> – Get index with items in a loop</h3>
+            <pre>
+for i, item in enumerate(['a', 'b', 'c']):
+    print(i, item)
+# Output:
+# 0 a
+# 1 b
+# 2 c
+            </pre>
+        </div>
+
+        <div class="command">
+            <h3><code>zip()</code> – Combine multiple iterables</h3>
+            <pre>
+names = ['Alice', 'Bob']
+scores = [90, 85]
+for name, score in zip(names, scores):
+    print(f"{name} scored {score}")
+# Output:
+# Alice scored 90
+# Bob scored 85
+            </pre>
+        </div>
+
+        <div class="command">
+            <h3><code>list comprehension</code> – Concise loop for lists</h3>
+            <pre>
+squares = [x*x for x in range(5)]
+print(squares)
+# Output: [0, 1, 4, 9, 16]
+            </pre>
+        </div>
+
+        <div class="command">
+            <h3><code>lambda</code> – Small anonymous functions</h3>
+            <pre>
+add = lambda x, y: x + y
+print(add(2, 3))
+# Output: 5
+            </pre>
+        </div>
+
+        <div class="command">
+            <h3><code>map()</code> – Apply function to iterable</h3>
+            <pre>
+nums = [1, 2, 3]
+doubled = list(map(lambda x: x * 2, nums))
+print(doubled)
+# Output: [2, 4, 6]
+            </pre>
+        </div>
+
+    </div>
+
+</body>
+</html>
